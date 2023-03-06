@@ -1,25 +1,37 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 
-void printArray(char arr[],int size){
-    cout<<"---PRINTING ARRAY---"<<endl;
-    for(int i =0;i<size;i++){
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
-    
+int getMin(int arr[],int size){
+       int min= INT_MAX;
+       for(int i=0;i<size;i++){
+        if(arr[i]<min){
+            min=arr[i];
+        }
+       }
+       return min;
+}
+
+int getMax(int arr[],int size){
+       int max= INT_MIN;
+       for(int i=0;i<size;i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+       }
+       return max;
 }
 int main () {
 
-        int arr[16]={0,2};
-        int arrsize= sizeof(arr)/sizeof(int);
-        cout<<arrsize<<endl;
-        // printArray(arr,arrsize);
+        int size; cin>>size;
+        int arr[100];
 
-        char ch[5]={'a','b'};
-        cout<<ch[12];
+        for(int i=0;i<size;i++){
+            cin>>arr[i];
+        }
+        cout<<"Max value "<<getMax(arr,size)<<endl;
+        cout<<"Min value "<<getMin(arr,size)<<endl;
 
-        printArray(ch);
         cout<<endl<<"---Done---"<<endl;
         return 0;
 }
