@@ -1,0 +1,1 @@
+for clearing screen vs code - learn.microsoft.com/en-us/answers/questions/633718/how-to-hide-path-in-vs-code-terminal
